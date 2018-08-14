@@ -1,0 +1,46 @@
+<!--
+  Generated template for the UpdatePage page.
+
+  See http://ionicframework.com/docs/components/#navigation for more info on
+  Ionic pages and navigation.
+-->
+<ion-header>
+
+  <ion-navbar color="grey">
+    <ion-title>update</ion-title>
+  </ion-navbar>
+
+</ion-header>
+
+
+<ion-content padding>
+  <ion-list *ngFor="let x of arrTemp; let i = index">
+    <ion-item>
+        <ion-label>Name:{{x.Name}}</ion-label>
+    </ion-item>
+    <button ion-button outline color="primary" (click)="updateName(i)" full>Edit</button>
+    <ion-item>
+        <ion-label>Surname:{{x.Surname}}</ion-label>
+      </ion-item>
+      <button ion-button outline color="primary" (click)="updateSurname(i)" full>Edit</button>
+   
+    <ion-item>
+        <ion-label>role:{{x.role}}</ion-label>
+    </ion-item>
+      <button ion-button outline color="primary" (click)="updateRole(i)" full>Edit</button>
+   
+    <ion-item >
+        <ion-label>IDno:{{x.IDno}}</ion-label>
+      </ion-item>
+      <button ion-button outline color="primary" (click)="updateIDno(i)" full>Edit</button>
+
+    <ion-item >
+        <ion-label>Cntx:{{x.Cntx}}</ion-label>
+        </ion-item>
+        <button ion-button outline color="primary" (click)="updateContact(i)" full>Edit</button>
+<div>
+        <button ion-button color="dark" full [navPush]="pass">Update</button>
+        </div>
+  </ion-list>
+  
+</ion-content>

@@ -1,0 +1,43 @@
+
+div.scroll-content{
+    // background-size: cover;
+    // background-attachment: fixed;
+    // align-items: center;
+    // display: flex;
+    // justify-content: center;
+ 
+
+    ion-header.header.header-md{
+        background-color: black;
+    }
+    ion-navbar.toolbar.toolbar-md{
+        border-style: double;
+        text-transform: uppercase;
+        text-align: center;
+        text-shadow: 2px 2px 3px black;
+    
+        border-radius: 10px;
+    
+    };
+
+
+    div.log{
+        margin-top: 50px;
+        display: block;
+        margin-left: auto;
+        margin-right: auto;
+        // margin-top: 50px;
+        height: 100px;
+        width: 200px;
+
+        img{
+            border-radius: 100px;
+            opacity: 0.8;
+            box-shadow: inset 0px 0px 50px black;
+        }
+    }
+    button{
+        box-shadow: 2px 2px 3px black;
+        
+    }
+ }

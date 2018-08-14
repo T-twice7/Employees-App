@@ -1,0 +1,47 @@
+<ion-header>
+
+  <ion-navbar color="grey">
+    <ion-title>Employees</ion-title>
+  </ion-navbar>
+
+</ion-header>
+
+
+<ion-content >
+  <div class="employees">
+    <ion-item>
+        <img ngif="url !=''" [src]="url">
+        <!-- <img #url [src]="url"> -->
+        </ion-item>
+    <ion-item>
+        <ion-label floating><ion-icon name="person-add">Name</ion-icon></ion-label>
+    <ion-input type="text" #Name="ngModel" [(ngModel)]="Name1" ></ion-input>
+
+  </ion-item>
+  <ion-item>
+    <ion-label floating><ion-icon name="person-add">Surname</ion-icon></ion-label>
+    <ion-input type="text"  #Surname="ngModel" [(ngModel)]="Surname1"></ion-input>
+  </ion-item>
+
+  <ion-item>
+    <ion-label floating><ion-icon name="person-add">Role</ion-icon></ion-label>
+    <ion-input type="text"  #role="ngModel" [(ngModel)]="role1"></ion-input>
+  </ion-item>
+
+  <ion-item>
+    <ion-label floating><ion-icon name="person-add">IDno</ion-icon></ion-label>
+    <ion-input type="text" #IDno="ngModel" [(ngModel)]="IDno1"></ion-input>
+  </ion-item>
+  <ion-item >
+    <ion-label floating><ion-icon name="person-add">Contact</ion-icon></ion-label>
+    <ion-input type="text" #Cntx="ngModel" [(ngModel)]="Cntx1"></ion-input>
+  </ion-item>
+  <div>
+    <button ion-button outline color="dark" full (click)="addE(Name.value,Surname.value,role.value,IDno.value,Cntx.value)">Add employees({{ empCount }})</button>
+  <button ion-button outline color="danger" full (click)="clr(Name.value,Surname.value,role.value,IDno.value,Cntx.value)">
+    Clear</button>
+      <button ion-button outline color="dark" full (click)= "List(Name.value,Surname.value,role.value,IDno.value,Cntx.value)" >Display Employees</button>
+      <input type="file"  accept="image/png, image/jpeg" (change)="img($event)">
+  </div>
+  </div>
+</ion-content>
