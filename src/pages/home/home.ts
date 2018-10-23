@@ -1,5 +1,5 @@
 import { Component } from '@angular/core';
-import { NavController } from 'ionic-angular';
+import { NavController, NavParams, ModalController, AlertController } from 'ionic-angular';
 
 import { LoginPage } from '../login/login';
 import { EmployeesPage } from '../employees/employees';
@@ -15,13 +15,16 @@ import {Details} from '../Class';
 })
 export class HomePage {
 
-  home1Root =LoginPage;
-  home2Root = EmployeesPage;
-  home3Root = EmployeeDetalailsPage;
-
-  constructor(public navCtrl: NavController) {
-
+  constructor(public navCtrl: NavController, public navParams: NavParams,public alertCtrl: AlertController,public modalCtrl: ModalController) {
   }
 
-  
+  sign()
+  {
+    let profileModal = this.modalCtrl.create(EmployeesPage);
+    profileModal.present();
+  }
+  Register()
+  {
+    this.navCtrl.push( LoginPage);
+  }
 }

@@ -1,24 +1,30 @@
 <ion-header>
-  <ion-navbar color="grey">
-    <ion-title>Login</ion-title>
-  </ion-navbar>
+
+    <ion-navbar color="darkgreen">
+      <ion-title>Register</ion-title>
+    </ion-navbar>
   
-
-</ion-header>
-
-
+  </ion-header>
 <ion-content>
-    <div class="log">
-    <img  src="../../assets/imgs/twice.jpg"/>
+    <div>
+      <h1>Register To</h1>
+      <h5>your people's App!</h5>
     <ion-item>
-      <ion-label floating>Username</ion-label>
-      <ion-input type="text" [(ngModel)]="name"></ion-input>
+      <ion-label floating>Name</ion-label>
+      <ion-input type="text"></ion-input>
     </ion-item>
-  
+    <ion-item>
+        <ion-label floating>Username</ion-label>
+        <ion-input type="text" ></ion-input>
+      </ion-item>
+      <ion-item>
+          <ion-label floating>ID number</ion-label>
+          <ion-input type="number"></ion-input>
+        </ion-item>
     <ion-item>
       <ion-label floating>Password</ion-label>
-      <ion-input type="password" [(ngModel)]="pin"></ion-input>
+      <ion-input type="password" ></ion-input>
     </ion-item>
-      <button ion-button full outline color="dark" (click)="login()">Sign In</button>
+      <button ion-button Block (click)=" Register()">Register</button>
     </div>
 </ion-content>
